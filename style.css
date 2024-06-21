@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(171, 32%, 88%);
+}
+
+.grid-container{
+    width: 90%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+}
+
+.item-1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.item-2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.item-3 {
+    background-color: rgb(255, 255, 255);
+    grid-row: 1/3;
+    grid-column:4/5;
+}
+
+.item-4{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: rgb(255, 255, 255);
+}
+
+.item-5{
+    grid-column: 2/4;    
+    grid-row: 2/3;
+    background: hsl(219, 29%, 14%);
+}
+
+.header{
+    display: flex;
+}
+
+img{
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.heading{
+    display: grid;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.info1{
+    font-size: 13px;
+}
+
+#p1{
+    color: white;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#p2{
+    color: hsl(0, 0%, 81%);
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+#p3{
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#p4{
+    color: hsl(0, 1%, 39%);
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+#daniel{
+    color: white;
+    font-weight: 400;
+}
+
+#verified{
+    color: hsl(0, 0%, 81%);
+    font-weight: 200;
+}
+
+#kira{
+    color: black;
+    font-weight: 400;
+}
+
+#verified1{
+    color: hsl(0, 1%, 39%);
+    font-weight: 200;
+}
+
+  @media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-1, .item-5 {
+        grid-column: span 2;
+    }
+
+    .item-3 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        grid-column: span 1;
+    }
+}
+
+@media (min-width:600px-1024px){
+    .grid-container{
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .item-3{
+        grid-column: span 2;
+    }
+}
